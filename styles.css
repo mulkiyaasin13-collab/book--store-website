@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #1e1e2f;
+    z-index: 1000;
+    animation: slideDown 0.8s ease;
+}
+
+/* LOGO */
+.logo h2{
+    color: white;
+}
+
+/* MENU */
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* HOVER EFFECT */
+nav ul li a:hover{
+    background: #00bcd4;
+    color: black;
+    transform: translateY(-3px);
+}
+
+/* UNDERLINE ANIMATION */
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #00bcd4;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* ANIMATION */
+@keyframes slideDown{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* HOME SECTION */
+.home{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    color: white;
+
+    /* Gradient Background */
+    background: linear-gradient(135deg, #1e1e2f, #00bcd4);
+
+    animation: fadeIn 1.5s ease;
+}
+
+/* CONTENT */
+.content h1{
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.content p{
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn{
+    display: inline-block;
+    padding: 12px 25px;
+    background: white;
+    color: #1e1e2f;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.btn:hover{
+    background: #000;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* FADE IN ANIMATION */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about{
+    display: flex;
+    align-items: none;
+    justify-content: center;
+    gap: 40px;
+    padding: 200px;
+    background: #f4f4f4;
+}
+
+/* IMAGE */
+.about-img img{
+    width: 300px;
+    border-radius: 10px;
+    animation: slideLeft 1s ease;
+}
+
+/* TEXT */
+.about-text{
+    max-width: 500px;
+    animation: slideRight 1s ease;
+}
+
+.about-text h2{
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #1e1e2f;
+}
+
+.about-text p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* ANIMATIONS */
+@keyframes slideLeft{
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight{
+    from{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.books{
+    text-align: center;
+    padding: 200px;
+    background: #f9f9f9;
+}
+
+.books h2{
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #1e1e2f;
+}
+
+.book-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.book-card{
+    width: 220px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* IMAGE */
+.book-card img{
+    width: 100%;
+    height: 160px;
+    border-radius: 8px;
+}
+
+/* HOVER EFFECT */
+.book-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* BUTTON */
+.btn{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #00bcd4;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: #1e1e2f;
+}
+.contact{
+    padding: 150px;
+    text-align: center;
+    background: #1e1e2f;
+    color: white;
+}
+
+.contact h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+.contact form{
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* INPUTS */
+.contact input,
+.contact textarea{
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* BUTTON */
+.contact button{
+    padding: 10px;
+    background: #00bcd4;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.contact button:hover{
+    background: white;
+    transform: scale(1.05);
+}
+.footer{
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.footer p{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* SOCIAL LINKS */
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social a{
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.social a:hover{
+    background: #00bcd4;
+    color: black;
+    transform: translateY(-3px);
+}
